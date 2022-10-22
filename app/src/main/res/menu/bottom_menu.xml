@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homePageFragment"
+        android:icon="@drawable/homeicon"
+        android:title="Home Page" />
+    <item
+        android:id="@+id/statementFragment"
+        android:icon="@drawable/statusicon"
+        android:title="Snow Condition" />
+</menu>

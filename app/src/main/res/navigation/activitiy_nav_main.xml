@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activitiy_nav_main"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.marangoz.silo.ui.HomePageFragment"
+        android:label="HomePageFragment"
+        tools:layout = "@layout/fragment_home_page">
+        <action
+            android:id="@+id/goToRegister"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementFragment"
+        android:name="com.marangoz.silo.ui.StatementFragment"
+        android:label="StatementFragment"
+        tools:layout = "@layout/fragment_home_page"/>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.marangoz.silo.ui.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout = "@layout/fragment_register">
+        <argument
+            android:name="value"
+            app:argType="boolean" />
+        <argument
+            android:name="field_id"
+            app:argType="integer" />
+        <argument
+            android:name="fieldName"
+            app:argType="string" />
+        <argument
+            android:name="fieldSize"
+            app:argType="string" />
+        <argument
+            android:name="cropName"
+            app:argType="string" />
+        <argument
+            android:name="cropAmount"
+            app:argType="integer" />
+        <argument android:name="cropSell"
+            app:argType="float" />
+        <argument
+            android:name="expenseAmount"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_Back"
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
